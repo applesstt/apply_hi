@@ -154,16 +154,16 @@ $(function() {
 
   //bind click
   $('.apply_show_btn').click(function() {
-    $('#apply_show').slideUp(1000);
-    $('#apply_form').slideDown(1000);
+    $('#apply_show').slideUp(500);
+    $('#apply_form').slideDown(500);
   });
   $('.apply_close').click(function() {
-    $('#apply_show').slideDown(1000);
-    $('#apply_form').slideUp(1000);
+    $('#apply_show').slideDown(500);
+    $('#apply_form').slideUp(500);
   });
 
   $('.pop_btm_toggle').click(function() {
-    $('.pop_btm_content').slideToggle(500);
+    $('.pop_btm_content').slideToggle(300);
   });
 
   var selStep = function(elm, index) {
