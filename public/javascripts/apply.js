@@ -135,14 +135,22 @@ $(function() {
     .setTween(TweenMax.from($('#pop_btm'), 1, {bottom: '-200%'}));
 
   //resize
-  $('section').height($(window).height());
-  $('.step').each(function() {
-    $(this).height($(this).width());
-    if(!$(this).hasClass('step_sel')) {
-      $(this).css('margin-top', $(this).width()/4);
-    }
+  var resize = function() {
+    $('section').height($(window).height());
+    $('.step').each(function() {
+      $(this).height($(this).width());
+      if(!$(this).hasClass('step_sel')) {
+        $(this).css('margin-top', $(this).width()/4);
+      }
+    });
+    $('.steps_des_left_bg, .steps_des_right_bg').height($('.steps_des_left_bg').width() * 1.2);
+  }
+
+  resize();
+
+  $(window).resize(function() {
+    resize();
   });
-  $('.steps_des_left_bg, .steps_des_right_bg').height($('.steps_des_left_bg').width() * 1.2);
 
   //bind click
   $('.apply_show_btn').click(function() {
