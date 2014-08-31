@@ -1,0 +1,106 @@
+extends layout
+
+block content
+  section
+    a#section_1
+    #animate test
+    image.logo(src='/images/logo.png')
+    .circle_wrap
+      image.circle_draw(src='/images/circle.png')
+      .logo_text
+    a.arrow_up.arrow_up_text(href='#section_2') 向上滑动
+  section
+    a#section_2
+    image.design_project(src='/images/design_project.png')
+    .design_img_wrap
+      image.design_img(src='/images/design_img.png')
+      image.design_ux(src='/images/design_ux.png')
+    .design_bottom
+      image.design_design(src='/images/design_design.png')
+      image.design_moode(src='/images/design_moode.png')
+    a.arrow_down(href='#section_1')
+    a.arrow_up(href='#section_3')
+  section.bg_large
+    a#section_3
+    .steps.clearfix
+      - each step, i in [['第一步','9月2日前','投递简历作品'],['第二步','9月3日','宣讲及互动'],['第三步','9月4日','测试面试']]
+        - var step_sel = i == 0 ? 'step_sel' : ''
+          .step(class=step_sel)
+            .step_title #{step[0]}
+            .step_date #{step[1]}
+            .step_info #{step[2]}
+    .step_bottom
+      .steps_des_wrap.clearfix
+        .steps_des_left_bg
+        .steps_des_right_bg
+        #stepsSwipe
+          .steps_des_list.clearfix
+            - var steps = []
+            - steps.push({month:'September',day:'2',icons:[['time_white_icon','2014年9月2日之前'],['tel_white_icon','叶子同学：<a href="tel:18262280653" style="color:#ffffff;">18262280635</a>'],['mail_white_icon','job@hipandora.com']]})
+            - steps.push({month:'September',day:'3',icons:[['time_white_icon','2014年9月3日15:00-17:30'],['edit_white_icon','现场报名和宣讲<br/>Table Workshop'],['location_white_icon','江南大学设计学院专业教室']]})
+            - steps.push({month:'September',day:'4',icons:[['time_white_icon','2014年9月4日上午'],['edit_white_icon','逻辑测试<br/>面试'],['location_white_icon','江南大学设计学院专业教室']]})
+            - each step_des, i in steps
+              .steps_des.clearfix
+                .steps_des_left
+                  .steps_des_month #{step_des.month}
+                  .steps_des_day #{step_des.day}
+                .steps_des_right
+                  - each step_icon in step_des.icons
+                    div(class='#{step_icon[0]}')!= step_icon[1]
+      .map_wrap
+        image.map(src='/images/map.png')
+    a.arrow_down(href='#section_2')
+    a.arrow_up(href='#section_4')
+  section
+    a#section_4
+    #apply_show.bg_large
+      .apply_show
+        .location_org_icon 北京市朝阳区建外SOHO西区15号楼
+        .tel_org_icon 叶子同学：
+          a(href='tel:18262280653', style='color:#000000;') 18262280653
+        .mail_org_icon job@hipandora.com
+        a.apply_show_btn(href='javascript:{}') 报名
+    #apply_form.bg_large.none
+      form.apply_form(onsubmit='return Apply.check();')
+        a.apply_close(href='javascript:{}') ×
+        .apply_title 报名表
+        .apply_des 欢迎加入，请填写您的信息
+        .apply_label_wrap
+          - each label in [['姓名','name'],['手机','mobile'],['邮箱','mail'],['学校','school'],['专业','trade']]
+            .apply_label
+              .apply_label_title #{label[0]}
+                .apply_label_error
+              input(type='text', id='#{label[1]}', name='#{label[1]}')
+          input.apply_submit(type='submit', value='提交')
+    a.arrow_down(href='#section_3')
+    .pop_btm
+      .pop_btm_head
+        a.pop_btm_toggle(href='javascript:{}')
+          em
+          em
+          em
+        .pop_btm_title UX培训
+      .pop_btm_content
+        #ux_swipe.pop_btm_swipe
+          .pop_btm_swipe_wrap
+            image.pop_btm_img(src='/images/ux_slider_1.png')
+            image.pop_btm_img(src='/images/ux_slider_2.png')
+            image.pop_btm_img(src='/images/ux_slider_3.png')
+            image.pop_btm_img(src='/images/ux_slider_4.png')
+        a.ux_arrow_left(href='javascript:{}')
+        a.ux_arrow_right(href='javascript:{}')
+        .ux_bullets
+          .ux_bullets_text 逻辑、推理、分析
+          .ux_bullets_wrap
+            em.ux_bullet.ux_bullet_on •
+            em.ux_bullet •
+            em.ux_bullet •
+            em.ux_bullet •
+
+block script
+  script(src='/vendor/ScrollMagic/js/_dependent/greensock/TweenMax.min.js')
+  script(src='/vendor/ScrollMagic/js/_dependent/greensock/plugins/ScrollToPlugin.min.js')
+  script(src='/vendor/ScrollMagic/js/_dependent/jquery.min.js')
+  script(src='/vendor/ScrollMagic/js/jquery.scrollmagic.min.js')
+  script(src='/vendor/swipe/swipe.min.js')
+  script(src='/javascripts/apply.js?v=001')
