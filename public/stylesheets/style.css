@@ -381,19 +381,22 @@ section .arrow_down {
   top: 20%;
   position: absolute;
 }
-.apply_show_btn {
+.apply_show_btn, .apply_show_btn_text {
   position: absolute;
-  right: 0.2em;
-  bottom: 0.2em;
-  background: url(../images/submit_circle.png) no-repeat 0 0;
+  width: 4em;
+  height: 4em;
   background-size: 100% 100%;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  font-size: 2em;
-  padding: 0.5em;
-  text-align: center;
-  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.apply_show_btn {
+  right: 1em;
+  bottom: 1em;
+  background-image: url(../images/submit_circle.png);
+}
+
+.apply_show_btn_text {
+  background-image: url(../images/submit_text.png);
 }
 
 /* apply form */

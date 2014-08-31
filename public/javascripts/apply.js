@@ -52,13 +52,16 @@ $(function() {
   var controller = new ScrollMagic();
 
   //scene.addIndicators();
+
   $(document).on("click", "a[href^=#]", function (e) {
     var id = $(this).attr("href"), $elem = $(id);
     if ($elem.length > 0) {
       e.preventDefault();
-      TweenMax.to($(window), 0.5, {scrollTo: {y: $elem.offset().top}});
+      //TweenMax.to($(_getWinTarget()), 0.5, {scrollTo: {y: $elem.offset().top}});
+      $('html,body').animate({scrollTop: $elem.offset().top}, 1000);
     }
   });
+
 
   var sceneOptions = {duration: 1000, offset: -300};
   var sections = $('section');
