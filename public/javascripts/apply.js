@@ -51,17 +51,12 @@ $(function() {
   //scroll magic
   var controller = new ScrollMagic();
 
-  new ScrollScene({triggerElement: "a#section_1", duration: 200, triggerHook: "onLeave"})
-    .setTween(TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7}))
-    .addTo(controller);
-
   //scene.addIndicators();
-
   $(document).on("click", "a[href^=#]", function (e) {
     var id = $(this).attr("href"), $elem = $(id);
     if ($elem.length > 0) {
       e.preventDefault();
-      TweenMax.to(window, 0.5, {scrollTo: {y: $elem.offset().top}});
+      TweenMax.to($(window), 0.5, {scrollTo: {y: $elem.offset().top}});
     }
   });
 

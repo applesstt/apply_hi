@@ -2,7 +2,7 @@ extends layout
 
 block content
   section
-    a#section_1
+    a.anchor#section_1
     #animate test
     image.logo(src='/images/logo.png')
     .circle_wrap
@@ -10,7 +10,7 @@ block content
       .logo_text
     a.arrow_up.arrow_up_text(href='#section_2') 向上滑动
   section
-    a#section_2
+    a.anchor#section_2
     image.design_project(src='/images/design_project.png')
     .design_img_wrap
       image.design_img(src='/images/design_img.png')
@@ -21,7 +21,7 @@ block content
     a.arrow_down(href='#section_1')
     a.arrow_up(href='#section_3')
   section.bg_large
-    a#section_3
+    a.anchor#section_3
     .steps.clearfix
       - each step, i in [['第一步','9月2日前','投递简历作品'],['第二步','9月3日','宣讲及互动'],['第三步','9月4日','测试面试']]
         - var step_sel = i == 0 ? 'step_sel' : ''
@@ -52,7 +52,7 @@ block content
     a.arrow_down(href='#section_2')
     a.arrow_up(href='#section_4')
   section
-    a#section_4
+    a.anchor#section_4
     #apply_show.bg_large
       .apply_show
         .location_org_icon 北京市朝阳区建外SOHO西区15号楼
