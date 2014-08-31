@@ -72,67 +72,67 @@ $(function() {
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[0])
-    .setTween(TweenMax.from($('.design_project'), 1, {left: "-200%"}));
+    .setTween(TweenMax.from($('.design_project'), 1, {left: "-200%", delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[0])
-    .setTween(TweenMax.from($('.design_ux'), 1, {top: "-200%"}));
+    .setTween(TweenMax.from($('.design_ux'), 1, {top: "-200%", delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[0])
-    .setTween(TweenMax.from($('.design_img'), 1, {right: "-200%"}));
+    .setTween(TweenMax.from($('.design_img'), 1, {right: "-200%", delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[0])
-    .setTween(TweenMax.from($('.design_bottom'), 1, {bottom: "-200%"}));
+    .setTween(TweenMax.from($('.design_bottom'), 1, {bottom: "-200%", delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[1])
-    .setTween(TweenMax.from($('.steps_des_wrap'), 1, {right: '-200%'}));
+    .setTween(TweenMax.from($('.steps_des_wrap'), 1, {right: '-200%', delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[1])
-    .setTween(TweenMax.from($('.map_wrap'), 1, {bottom: '-200%'}));
+    .setTween(TweenMax.from($('.map_wrap'), 1, {bottom: '-200%', delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[2])
-    .setTween(TweenMax.from($('.location_org_icon'), 1, {left: '-200%'}));
+    .setTween(TweenMax.from($('.location_org_icon'), 1, {left: '-200%', delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[2])
-    .setTween(TweenMax.from($('.tel_org_icon'), 1, {left: '-200%'}));
+    .setTween(TweenMax.from($('.tel_org_icon'), 1, {left: '-200%', delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[2])
-    .setTween(TweenMax.from($('.mail_org_icon'), 1, {left: '-200%'}));
+    .setTween(TweenMax.from($('.mail_org_icon'), 1, {left: '-200%', delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[2])
-    .setTween(TweenMax.from($('.apply_show_btn'), 1, {right: '-200%'}));
+    .setTween(TweenMax.from($('.apply_show_btn'), 1, {right: '-200%', delay: 3}));
 
   new ScrollScene(sceneOptions)
     .addTo(controller)
     .triggerHook("onCenter")
     .triggerElement(sections[2])
-    .setTween(TweenMax.from($('#pop_btm'), 1, {bottom: '-200%'}));
+    .setTween(TweenMax.from($('#pop_btm'), 1, {bottom: '-200%', delay: 3}));
 
   //resize
   var resize = function() {
