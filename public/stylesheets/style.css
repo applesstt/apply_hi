@@ -106,7 +106,7 @@ section .arrow_down {
   display: block;
   background-size: auto 1em;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 100%;
 }
 
 section .arrow_up {
@@ -123,7 +123,6 @@ section .arrow_up_text {
   color: #ffffff;
   text-decoration: none;
   padding-bottom: 1.5em;
-  background-position-y: 100%;
   text-align: center;
 }
 
