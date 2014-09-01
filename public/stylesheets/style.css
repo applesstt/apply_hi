@@ -160,7 +160,12 @@ section .arrow_down {
   height: 20%;
   font-size: 0.7em;
 }
-.step_sel .step_title,
+.step_title {
+  font-weight: bold;
+}
+.step_sel .step_title {
+  font-size: 1.2em;
+}
 .step_sel .step_date,
 .step_sel .step_info {
   font-size: 1em;
