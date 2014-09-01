@@ -47,6 +47,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  cursor: pointer;
 }
 .logo_text {
   background: url(../images/logo_text.png) no-repeat 50% 50%;
@@ -316,7 +317,7 @@ section .arrow_down {
 .pop_btm_content {
   position: relative;
   border-top: 0.1em solid #acacac;
-  padding: 2em 1em;
+  padding: 4em 1em 2em;
 }
 .pop_btm_swipe {
   width: 60%;
@@ -351,7 +352,7 @@ section .arrow_down {
 }
 
 .ux_bullets {
-  margin-top: 1em;
+  margin-top: 3em;
 }
 .ux_bullets_text {
   text-align: center;

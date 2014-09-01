@@ -47,6 +47,17 @@ var Apply = (function() {
   }
 }).call(this);
 
+var scrollTop = function(id) {
+  if(id.indexOf('#') !== 0) {
+    id = '#' + id;
+  }
+  var $elem = $(id);
+  if ($elem.length > 0) {
+    //TweenMax.to($(_getWinTarget()), 0.5, {scrollTo: {y: $elem.offset().top}});
+    $('html,body').animate({scrollTop: $elem.offset().top}, 1000);
+  }
+}
+
 $(function() {
   //scroll magic
   var controller = new ScrollMagic();
@@ -54,14 +65,15 @@ $(function() {
   //scene.addIndicators();
 
   $(document).on("click", "a[href^=#]", function (e) {
-    var id = $(this).attr("href"), $elem = $(id);
-    if ($elem.length > 0) {
-      e.preventDefault();
-      //TweenMax.to($(_getWinTarget()), 0.5, {scrollTo: {y: $elem.offset().top}});
-      $('html,body').animate({scrollTop: $elem.offset().top}, 1000);
-    }
+    e.preventDefault();
+    var id = $(this).attr("href");
+    scrollTop(id);
   });
 
+  $('.circle_wrap').click(function() {
+    console.log(this);
+    scrollTop('section_2');
+  });
 
   var sceneOptions = {duration: 1000, offset: -300};
   var sections = $('section');
