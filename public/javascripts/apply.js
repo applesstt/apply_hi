@@ -71,7 +71,6 @@ $(function() {
   });
 
   $('.circle_wrap').click(function() {
-    console.log(this);
     scrollTop('section_2');
   });
 
@@ -217,4 +216,15 @@ $(function() {
   $('.pop_btm_content').hide();
   $('.ux_arrow_left').click(function() { uxSwipe.prev(); });
   $('.ux_arrow_right').click(function() { uxSwipe.next(); });
+
+  jQuery.event.special.swipe.settings.sensitivity = 100;
+  $('section').each(function(index) {
+    $(this).on('swipedown', function() {
+      if(index === 0) return;
+      scrollTop('section_' + index);
+    }).on('swipeup', function() {
+        if(index === 3) return;
+        scrollTop('section_' + (index + 2));
+      })
+  });
 });
