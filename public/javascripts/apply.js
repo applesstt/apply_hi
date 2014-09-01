@@ -1,6 +1,6 @@
 var Apply = (function() {
   var ids = [{id: 'name', name: '姓名'},
-    {id: 'mobile', name: '手机', reg: /^(((13[0-9]{1})|159|153)+\d{8})$/},
+    {id: 'mobile', name: '手机', reg: /^\d{11}$/},
     {id: 'mail', name: '邮箱', reg: /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/},
     {id: 'school', name: '学校'},
     {id: 'trade', name: '专业'}];

@@ -80,7 +80,8 @@ a {
   position: relative;
 }
 .design_project {
-  padding-top: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 0.3em;
 }
 .design_ux {
   opacity: 0.3;
