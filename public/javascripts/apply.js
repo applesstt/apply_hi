@@ -73,7 +73,7 @@ $(function() {
   $('.circle_wrap').click(function() {
     scrollTop('section_2');
   });
-  var isIphone4 = window.screen.height <= (960 / 2) && true;
+  var isIphone4 = window.screen.height == (960 / 2) && true;
   var _duration = isIphone4 ? 800 : 1000;
   var sceneOptions = {duration: _duration, offset: -300};
   var sections = $('section');
