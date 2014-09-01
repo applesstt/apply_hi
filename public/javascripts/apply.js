@@ -146,10 +146,6 @@ $(function() {
 
   resize();
 
-  $(window).resize(function() {
-    resize();
-  });
-
   //bind click
   $('.apply_show_btn').click(function() {
     $('#apply_show').slideUp(500);
