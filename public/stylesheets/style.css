@@ -79,9 +79,9 @@ a {
   width: 100%;
   position: relative;
 }
-.design_project {
-  padding-top: 1.5em;
-  padding-bottom: 0.3em;
+#section_2 {
+  display: block;
+  height: 2em;
 }
 .design_ux {
   opacity: 0.3;
