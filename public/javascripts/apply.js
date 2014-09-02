@@ -78,6 +78,7 @@ $(function() {
     $('.design_design,.design_moode').css('marginTop', 0);
     $('.apply_form').css('top', '0.5em');
     $('#section_2').css('height', '1.5em');
+    $('.apply_submit').css('marginTop', '0.5em');
   }
   var _duration = isIphone4 ? 800 : 1000;
   var sceneOptions = {duration: _duration, offset: -300};
