@@ -76,6 +76,8 @@ $(function() {
   var isIphone4 = window.screen.height == (960 / 2) && true;
   if(isIphone4) {
     $('.design_design,.design_moode').css('marginTop', 0);
+    $('.apply_form').css('top', '0.5em');
+    $('#section_2').css('height', '1.5em');
   }
   var _duration = isIphone4 ? 800 : 1000;
   var sceneOptions = {duration: _duration, offset: -300};
