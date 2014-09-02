@@ -74,6 +74,9 @@ $(function() {
     scrollTop('section_2');
   });
   var isIphone4 = window.screen.height == (960 / 2) && true;
+  if(isIphone4) {
+    $('.design_design,.design_moode').css('marginTop', 0);
+  }
   var _duration = isIphone4 ? 800 : 1000;
   var sceneOptions = {duration: _duration, offset: -300};
   var sections = $('section');
