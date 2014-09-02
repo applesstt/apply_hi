@@ -73,6 +73,7 @@ $(function() {
   $('.circle_wrap').click(function() {
     scrollTop('section_2');
   });
+  $('.pop_btm_img').height($('.pop_btm_img:first').width() * 422 / 376);
   var isIphone4 = window.screen.height == (960 / 2) && true;
   if(isIphone4) {
     $('.design_design,.design_moode').css('marginTop', 0);
