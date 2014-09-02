@@ -413,7 +413,7 @@ section .arrow_down {
   padding: 0.5em 5%;
   position: absolute;
   left: 15%;
-  top: 3em;
+  top: 2em;
 }
 .apply_close {
   background-color: #666666;
@@ -431,8 +431,8 @@ section .arrow_down {
 }
 .apply_title {
   text-align: center;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1.2em;
+  line-height: 1.2em;
 }
 .apply_des {
   margin-top: 0.3em;
