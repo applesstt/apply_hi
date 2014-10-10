@@ -36,7 +36,7 @@
 			font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;word-wrap:break-word;
 			height:100%;
 			margin:0;
-			padding:0；
+			padding:0;
 		}
 		
 		
@@ -44,11 +44,11 @@
 		.pagecontent{
 
 			position:absolute;
-			 width:100%;
+			 width:340px;
 			height:504px;
-			left:0;
+			left:50%;
 			top:50%;
-			margin:-252px 0 0 0
+			margin:-252px 0 0 -168px;
 
 		}
 
@@ -1220,7 +1220,7 @@ function cover_init()
 
 
 			init_page();
-			ws=document.body.clientWidth/320.0;
+			ws=document.body.clientWidth/340.0;
 			hs=document.body.clientHeight/504.0;
 			if(ws-hs>1) ws=hs;
 
