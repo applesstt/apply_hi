@@ -44,11 +44,15 @@
 		.pagecontent{
 
 			position:absolute;
-			 width:340px;
-			height:504px;
-			left:50%;
+			//width:340px;
+			//height:504px;
+      //left: 0;
+      //margin:-252px 0 0 -168px;
+      width: 100%;
+      height: 100%;
+			left:0;
 			top:50%;
-			margin:-252px 0 0 -168px;
+			margin:-252px 0 0 0;
 
 		}
 
@@ -1220,7 +1224,7 @@ function cover_init()
 
 
 			init_page();
-			ws=document.body.clientWidth/340.0;
+			ws=document.body.clientWidth/320.0;
 			hs=document.body.clientHeight/504.0;
 			if(ws-hs>1) ws=hs;
 
@@ -1245,7 +1249,8 @@ function cover_init()
 
 
 			$('.pagecontent').each(function(){
-					$(this).css({ scale: hs>ws?ws:hs});
+					//$(this).css({ scale: hs>ws?ws:hs});
+					$(this).css({ scale: 1});
 			});
 
 
